@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>AutoCAD I/0 入门课程</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -46,21 +46,27 @@
 					<P></P>
 					<h3>梁晓冬</h3>
 					<P></P>
-					<h3>DevTech中国区经理</h3>
+					<h6>开发顾问,DevTech中国区经理</h6>					 
 					<P></P>
-					<h5>开发技术支持部(DevTech)</h5>				 
+					<h6>开发技术支持部(DevTech)</h6>	
+ 					 <p><font size="5">全连接: http://xiaodongliang.github.io/AutoCADIO_Slides_CHS/</font></p>
 				</section>
 
 				<section>
 					<h2>内容</h2>
 					<p>
 						<ul>
-						<li>回顾：AcCoreConsole</li>
+						<li>回顾:AcCoreConsole</li>
 						<li>AutoCAD I/0介绍</li>
 						<li>API概览</li>
 						<li>演示</li>
 					</ul>
 					</p>
+				</section>
+				
+				<section>
+					<h2>引言 - 需求是什么</h2>
+					
 				</section>
 				
 				<section>
@@ -79,7 +85,7 @@
 								<ul>
 								<li>ObjectARX ，.NET ，LISP</li>								 								 
 								</ul>
-							<li><a href="http://through-the-interface.typepad.com/through_the_interface/2012/02/the-autocad-2013-core-console.html">更多阅读</a></li>
+							<li><a href="http://blog.csdn.net/autodeskinventorapi/article/details/45074629">更多阅读</a></li>
 						</ul>
 					</p>
 				</section>
@@ -91,7 +97,8 @@
 				
 				<section>
 					<h2>AutoCAD I/O基本流程</h2>					 
-					<h8>云端AcCoreConsole</h8>				
+					<h8>云端AcCoreConsole</h8>
+					<p></p>
 					<h8>	云端运行AutoCAD,批处理DWG </h8>		
 					<img width="800" height="500" data-src="images/IOWorkflow.jpg" alt="Down arrow">	
 				</section>
@@ -112,8 +119,9 @@
 								<li>没有所谓’安装‘</li>								 								 
 							</ul> 
 					</ul>	
-				</section>
-				
+				</section> 
+			 
+				 
 				<section>
 					<h2>接口概览</h2>					 
 					<ul>							
@@ -124,45 +132,173 @@
 									<li>Activity</li>								 								 
 									<li>AppPackage</li>								 								 
 								</ul>
-							<li>和客户端用什么语言无关，只要能发送 HTTP请求</li>
-								<ul>
-								<li>也有一些封装好的.NET 库 ，便于使用</li>								 								 
-							</ul> 
+							<li>和客户端用什么语言无关，只要能发送 HTTP请求</li> 
+							<li>服务基地址：https://developer.api.autodesk.com/autocad.io/v1 </li>
+							<li><a href="http://developer.api.autodesk.com/documentation/v1/acad_io/index.html#acad-io-api-reference">服务列表</a></li>
+								
+							
 					</ul>	
+				</section>
+				
+				<section>
+					<section id="applykey">
+						<h2>申请开发key</h2>
+						<p>登陆<a href="http://developer.autodesk.com/">http://developer.autodesk.com/</a> </p>
+						<p class="applykeyfragment">1. 创建一个APP</p>
+						<p ><img width="300" height="150" data-src="images/createapp.png" alt="Down arrow"></p>								
+						<p class="applykeyfragment">2. 选择APP服务为AutoCAD I/O </p>
+						<p ><img width="300" height="150" data-src="images/chooseservice.png" alt="Down arrow"></p>						
+					</section>	
+
+					<section id="applykey">
+						<h2>申请开发key</h2>
+						<ul>	
+							<p>3. 填写APP的基本信息</p>						
+							<li>必填APP名</li>	
+							<li>选填描述，回调URL和程序网站</li>								 
+						</ul>		
+						<p ><img width="500" height="400" data-src="images/key.png" alt="Down arrow"></p>								  
+					</section>							
+				</section> 
+				
+				<section>
+					<section id="applycloud">
+							<h2>网盘（以阿里云为例）</h2>
+							<ul>	
+								<p>1. 登陆<a href = "https://account.aliyun.com/">阿里云</a></p>													 						 
+								<li>xiaodong.liang@autodesk.com</li>
+								<li>asdfghjkl1</li>								
+							</ul>		
+							<p ><img width="500" height="400" data-src="images/alilogin.png" alt="Down arrow"></p>								  
+					 </section>	
+					 <section id="applycloud">
+							<h2>网盘（以阿里云为例）</h2>
+							<ul>	
+								<p>2. 开放存储服务OSS</p>													 						 
+							</ul>		
+							<p ><img width="500" height="400" data-src="images/alioss.png" alt="Down arrow"></p>								  
+					 </section>	
+					  <section id="applycloud">
+							<h2>网盘（以阿里云为例）</h2>
+							<ul>	
+								<p>3. 进入bucket testio</p>													 						 
+							</ul>		
+							<p ><img width="500" height="400" data-src="images/alibucket.png" alt="Down arrow"></p>								  
+					 </section>	
+					 
+					   <section id="applycloud">
+							<h2>网盘（以阿里云为例）</h2>
+							<ul>	
+								<p>4. 上载文件>> 选取某DWG文件</p>													 						 
+								<p>5. 获取地址   </p>			
+							</ul>		
+							<p ><img width="700" height="400" data-src="images/alifile.png" alt="Down arrow"></p>								  
+					 </section>	
+				 </section> 
+				
+				<section>
+					<h2><a href="https://www.getpostman.com/collections/7055b4adedb172ba00d9	">PostMan Collection </a><h2>
+					<p ><img width="500" height="400" data-src="images/postman.png" alt="Down arrow"></p>	
+				</section>
+				
+				
+				
+				<section>
+					<h2>身份认证</h2>			
+					<section id="gettoken">
+					<li>OAuth2 token</li> 				 
+					<code><pre>
+POST /authentication/v1/authenticate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 103
+
+client_id=my_client_id
+&client_secret=my_client_secret
+&grant_type=client_credentials
+					</code></pre>
+					</section>
+					<section id="gettoken">
+					<p ><img width="500" height="400" data-src="images/gettoken.png" alt="Down arrow"></p>	
+					</section>
 				</section>
 				
 				<section>
 					<h2>Activity和WorkItem</h2>			
 					<ul>
-						<li>Activity可以理解为一个功能函数</li>
-						<li>WorkItem则是用来调用函数</li>						 
+						<li>Activity：具体脚本和参数，可以理解为一个功能函数</li>
+						<li>WorkItem：一次计划任务，提供参数。用来调用函数</li>						 
 					</ul>		 
 					<img width="500" height="300" data-src="images/act-like-fun.png" alt="Down arrow">
 					<img width="400" height="300" data-src="images/work-like-fun.png" alt="Down arrow">					 
 				</section>
 				
 				<section>
-					<h2>Activity</h2>			
-					<ul>							
-							<li>定义输入输出参数</li>								 							 
-								<ul>
-									<li>满足 URL 的参数要求</li> 	 								 
-								</ul>
+					<section id="activity">
+						<h2>Activity</h2>			
+						<ul>							
+								<li>定义输入输出参数</li>								 							 
+									<ul>
+										<li>满足 URL 的参数要求</li> 	 								 
+									</ul>
+									<P></P>
+								<li>计划提供Activities库</li>
+									<ul>
+									<li>作为AutoCAD专业库</li>								 								 
+								</ul> 
 								<P></P>
-							<li>计划提供Activities库</li>
-								<ul>
-								<li>作为AutoCAD专业库</li>								 								 
-							</ul> 
-							<P></P>
-							<li>Activities可以是公开或私有</li>
-								<ul>
-								<li>可以分享Activities</li>								 								 
-							</ul> 
-					</ul>			 					  
+								<li>Activities可以是公开或私有</li>
+									<ul>
+									<li>可以分享Activities</li>								 								 
+								</ul> 
+						</ul>
+					</section>
+					<section id="activity">
+					 <h2>Activity</h2>
+					 <ul>	
+					 <li>InputParameters: 需要的输入参数</li>	
+					 <li>OutputParameters: 输出参数</li>	
+					 <li>Instruction: 定义要执行的Script</li>
+					 <li>Id: Action的名字</li>
+					 </ul>
+					<code><pre>
+POST /autocad.io/v1/Activities HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer my_token
+{
+  "RequiredEngineVersion":"20.0",
+  "Parameters":{
+    "InputParameters":[
+      {
+        "Name":"HostDwg",
+		"LocalFileName":"$(HostDwg)"
+      }
+    ],
+	"OutputParameters":[
+      {
+        "Name":"Result",
+		"LocalFileName":"result.dwg"
+      }
+    ]
+  },
+  "Instruction":{
+ 	"Script":"_tilemode 1 _line 0,0 1,1  _save result.dwg\n"
+  },
+  "Version":1,
+  "UserId":"",
+  "Id":"CreateALine"
+}
+					</code></pre>
+					</section>
+					<section id="activity">
+					 <h2>Activity</h2>	
+					 <img width="700" height="500" data-src="images/createact.png" alt="Down arrow"> 
+					 </section>
 				</section>
 				
 				<section>
-					<h2>WorkItem</h2>			
+					<section id="workitem">
+					<h2>WorkItem</h2>	
+									
 					<ul>							
 							<li>WorkItem需要</li>								 							 
 								<ul>
@@ -176,37 +312,78 @@
 								<li>可用状态查询方式</li>								 								 
 								<li>也可使用回调URL</li>								 								 								 
 							</ul> 
-					</ul>			 					  
+					</ul>	
+					</section>
+					<section id="workitem">
+					<h2>WorkItem</h2>
+					 <ul>	
+					 <li>InputArguments: 需要的输入参数, 源DWG所在位置</li>	
+					 <li>OutputArguments: 输出参数，生成的结果存放位置</li>						  
+					 <li>ActivityId: 需要使用哪个Activity</li>
+					 <li>不需要设定WorkItem的名字，系统自行分配</li>
+					 </ul>						
+					<code><pre>
+POST https://developer.api.autodesk.com/autocad.io/v1/WorkItems HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer my_token
+Host: autocad.io
+Content-Length: 1711
+
+{
+   "odata.metadata":"https://developer.api.autodesk.com/autocad.io/v1/$metadata#WorkItems/@Element","Arguments":{
+   "InputArguments":[
+   {
+      "Resource":"https://s3.amazonaws.com/AutoCAD-Core-Engine-Services/TestDwg/makeall.dwg?
+      AWSAccessKeyId=AKIAIJFIKBQ63LIX6C2Q&Expires=1420099140&Signature=M08cnEcwClGjyNwwSll1GnaHhLw%3D",
+      "Name":"HostDwg",
+	  "Authentication":null,
+	  "ResourceKind":null,
+	  "StorageProvider":"Generic",
+	  "HttpVerb":null
+   }
+   ],"OutputArguments":[
+   {
+      "Resource":null,
+	  "Name":"Result",
+	  "Authentication":null,
+	  "ResourceKind":null,
+	  "StorageProvider":"Generic",
+	  "HttpVerb":"POST"
+   }
+   ]
+   },
+   "Status":"Succeeded","StatusDetails":{"Report":null},
+   "AvailabilityZone":null,
+   "ActivityId":{
+		"UserId":"Shared",
+		"Id":"PlotToPDF" },
+	"Version":1,
+   "Timestamp":"2014-05-12T17:06:15Z","UserId":"","Id":""
+}
+					</code></pre>
+					</section>
+					<section id="workitem">
+					<h2>WorkItem</h2>
+					 <img width="700" height="500" data-src="images/workitem.png" alt="Down arrow"> 
+
+					</section>
+					
+					<section id="workitem">
+					<h2>WorkItem 返回值</h2>
+					<font size="5">
+					<ul> 
+						<li>Response.Status: 标示成功，或失败的代码</li>
+						<li>Response.OutputArguments.Resource: 结果文件地址，存放在IO租用的亚马逊服务器上</li>
+						<li>Response.StatusDetails.Report： 任务日志,查看具体错误的环节</li>
+						<img width="700" height="500" data-src="images/workitemreport.png" alt="Down arrow">  
+					</ul>
+					</font> 
+
+					</section>
+					
 				</section>
 				
-				<section>
-					<h2>AppPackage</h2>			
-					<ul>							
-							<li>可上载 .NET或C++ 程序</li>	
-							<P></P>							
-							<li>CRX 程序</li>				
-							<P></P>														
-							<li>DBX 程序</li>				
-							<P></P>														
-							<li>App 必须打包为<a href="http://download.autodesk.com/media/adn/ADN_DevCast_Episode_6/ADN_DevCast_Episode_6.html">Autoloader</a>格式</li>								 							 
-							<P></P>	 							 
-					</ul>			 					  
-				</section>
-				
-				<section>
-					<h2>外部引用</h2>			
-					<ul>							
-							<li>DWG 文件可以有外部参照 (dwg, 图片等.)</li>	
-							<P></P>							
-							<li>客户端必须提供所有引用</li>				
-							 <ul>
-								<li>网络传输package</li>								 								 
-								<li>输入参数提供内联 ‘File’ 对象 (JSON 字串描述URLs和其本地名)</li>	 
-					</ul>			 					  
-				</section> 
-				
-				
-				
+					
 				<section>
 					<h2>背后发生了什么</h2>			
 					<ul>							
@@ -221,36 +398,107 @@
 							<li>将结果上载到输出参数指定的存储</li>
 							<ul>
 								<li>HTTP POST/PUT</li>								
-							</ul>							
-							 	 							 
+							</ul> 							 
 					</ul>			 					  
 				</section>
+			 
 				
-				<section data-transition="slide" data-background="#317f65" data-background-transition="zoom">
-					<h1>演示</h1>   
+				<section>
+					<h2>.NET库</h2>
+				 
+					<ul>  
+							<li>Service Reference</li>	
+							<li>Address: https://developer.api.autodesk.com/autocad.io/v1</li>	
+							<img width="700" height="500" data-src="images/netreference.png" alt="Down arrow">  
+					</ul>
+				  			   
+				</section>
+				
+				<section>
+					<h2>AppPackage</h2>			
+					<ul>							
+							<li>可上载 .NET或C++ 程序</li>	
+							<P></P>							
+							<li>CRX 程序</li>				
+							<P></P>														
+							<li>DBX 程序</li>				
+							<P></P>														
+							<li>App 必须打包为<a href="http://download.autodesk.com/media/adn/ADN_DevCast_Episode_6/ADN_DevCast_Episode_6.html">Autoloader</a>格式</li>								 							 
+							<P></P>	 							 
+					</ul>		
+	
+					
 				</section> 
+				
+					<section> 
+					<section id="AppPackage">
+					<h2>AppPackage过程</h2>	
+					
+						<ul>		
+								<font size= "5">
+								<li>1. 准备AutoCAD开发程序的bundle的zip包</li>	
+								<li>2. 得到上载package的存储url： IO在亚马逊服务器上的空间</li>	
+								<li>3. 将准备好的bundle的zip文件上载package的存储url </li>	
+								<li>4. 创建Package</li>	
+								<li>5. 创建Activity和Package关联</li>	
+								<li>6. 创建WorkItem执行任务</li>	 
+								
+								<img width="800" height="400" data-src="images/package.png" alt="Down arrow">  
+								</font>
+								
+						</ul>	
+					</section> 
+					
+					<section id="AppPackage过程">
+						<li>1. 准备AutoCAD开发程序的bundle的zip包</li>	
+						<li>PackageContents.xml</li>
+						<li>LoadOnCommandInvocation="True":  执行自定义命令时按需加载</li>
+					</section> 
+					
+					<section id="AppPackage过程">
+						<li>2. 得到上载package的存储url： IO在亚马逊服务器上的空间</li>	
+					</section> 
+					
+					<section id="AppPackage过程">						 	
+						<li>3. 将准备好的bundle的zip文件上载package的存储url </li>	
+						 
+					</section> 
+					
+						<section id="AppPackage过程">						 	
+						<li>4. 创建Package</li>							 
+					</section> 
+					
+					<section> 					
+						<section id="AppPackage过程">						 	
+					    <li>5. 创建Activity和Package关联</li>	
+					</section> 
+					
+					<section> 					
+						<section id="AppPackage过程">						 	
+						 <li>6. 创建WorkItem执行任务</li>	 
+					</section>
+					
+				</section>
 				
 				
 				<section>
-					<section id="fragments">
-						<h2>申请开发key</h2>
-						<p>登陆<a href="http://developer.autodesk.com/">http://developer.autodesk.com/</a> </p>
-						<p class="fragment">1. 创建一个APP</p>
-						<p class="fragment"><img width="300" height="150" data-src="images/createapp.png" alt="Down arrow"></p>								
-						<p><span class="fragment">2. 选择APP服务为AutoCAD I/O</span> </p>
-						<p class="fragment"><img width="300" height="150" data-src="images/chooseservice.png" alt="Down arrow"></p>
-						
-					</section>	
-
-					<section>
-						<p>3. 填写APP的基本信息</p>
-						<ul>							
-							<li>必填APP名</li>	
-							<li>选填描述，回调URL和程序网站</li>								 
-						</ul>		
-						<p class="fragment"><img width="500" height="400" data-src="images/key.png" alt="Down arrow"></p>								  
-					</section>					
-				</section>
+					<h2>外部引用</h2>			
+					<ul>							
+							<li>DWG 文件可以有外部参照 (dwg, 图片等.)</li>	
+							<P></P>							
+							<li>客户端必须提供所有引用</li>				
+							 <ul>
+								<li>网络传输package</li>								 								 
+								<li>输入参数提供内联 ‘File’ 对象 (JSON 字串描述URLs和其本地名)</li>	 
+					</ul>			 					  
+				</section> 
+				 
+				
+				<section data-transition="slide" data-background="#317f65" data-background-transition="zoom">
+					<h1>演示</h1>   
+					<li><a href="http://makemycloset.azurewebsites.net/">抽屉定制设计</a></li>	
+					<li><a href="http://jigsawify.com">拼图DWG生成器</a></li>		
+				</section>  
 				
 				<section>
 					<h1>参考资料</h1> 
@@ -272,11 +520,12 @@
 					</ul>	
 				</section>
 				
+				
 				<section>
 					<h2>Autodesk ADN 微信公众号</h2>
 					 <img width="300" height="300" data-src="images/wechat.jpg" alt="Down arrow">	
-					 <h6>梁晓冬邮箱 <a href="xiaodong.liang@autodesk.com">xiaodong.liang@autodesk.com</a></h6>
-					 <h6>博客 <a href="http://blog.csdn.net/autodeskinventorapi">http://blog.csdn.net/autodeskinventorapi</a></h6>
+					 <h6><a href="cn.linkedin.com/in/xiaodongliang">我的linkedIn </a></h6>
+					 <h6> <a href="http://blog.csdn.net/autodeskinventorapi">我的博客</a></h6>
 					 <p><font size="5">在线PPT网址短连接: http://dwz.cn/I33Vw  注意大小写</font></p>
 					 <p><font size="5">全连接: http://xiaodongliang.github.io/AutoCADIO_Slides_CHS/</font></p>
 				</section> 
